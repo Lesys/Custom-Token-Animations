@@ -145,7 +145,7 @@ class CTA {
         Hooks.on("createToken", (scene, token) => {
             let tokenInstance = canvas.tokens.get(token._id)
             if (!tokenInstance) return;
-            let flags = tokenInstance.getFlag("Custom-Token-Animations", "anim") ? tokenInstance.getFlag("Custom-Token-Animations", "anim") : []
+            let flags = tokenInstance.document.getFlag("Custom-Token-Animations", "anim") ? tokenInstance.getFlag("Custom-Token-Animations", "anim") : []
             if (flags) CTA.AddTweens(tokenInstance)
         });
         Hooks.on("preUpdateToken", async (_scene, token, update) => {
@@ -189,7 +189,7 @@ class CTA {
          * @param {String} name 
          */
     static hasAnim(token, name) {
-        let anims = token.getFlag("Custom-Token-Animations", "anim")
+        let anims = token.document.getFlag("Custom-Token-Animations", "anim")
         if (!anims) return false;
         for (let testAnim of anims) {
             if (testAnim.name === name) return true;
@@ -273,7 +273,7 @@ class CTA {
             CTAsocket.executeAsGM("removeByName", token.id, animName, actorRemoval, fadeOut);
             return;
         }
-        let tokenFlags = Array.from(token.getFlag("Custom-Token-Animations", "anim") || [])
+        let tokenFlags = Array.from(token.document.getFlag("Custom-Token-Animations", "anim") || [])
         if (!Array.isArray(animName)) animName = [animName]
         animName.forEach(a => {
             let removedAnim = tokenFlags.find(i => i.name === a)
