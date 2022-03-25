@@ -37,10 +37,10 @@
 	],
 	"type": "module",
 	"socket": true,
-	"url": "https://github.com/kandashi/Custom-Token-Animations",
-    "manifest": "https://raw.githubusercontent.com/kandashi/Custom-Token-Animations/main/module.json",
-	"download": "https://github.com/kandashi/Custom-Token-Animations/archive/main.zip",
-	"changelog": "https://raw.githubusercontent.com/kandashi/Custom-Token-Animations/master/changelog.md",
-	"bugs": "https://github.com/kandashi/Custom-Token-Animations/issues",
+	"url": "https://github.com/Lesys/Custom-Token-Animations",
+    "manifest": "https://raw.githubusercontent.com/Lesys/Custom-Token-Animations/main/module.json",
+	"download": "https://github.com/Lesys/Custom-Token-Animations/archive/main.zip",
+	"changelog": "https://raw.githubusercontent.com/Lesys/Custom-Token-Animations/master/changelog.md",
+	"bugs": "https://github.com/Lesys/Custom-Token-Animations/issues",
 	"allowBugReporter": true
 }
